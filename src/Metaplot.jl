@@ -1,3 +1,11 @@
+"""
+    metaplot(y,v,x) 
+    
+    Metaregression of point estimate on ONE variable (x) 
+    
+    
+"""
+
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 

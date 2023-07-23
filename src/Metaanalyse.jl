@@ -1,6 +1,13 @@
-module MetaanalysisJulia
+module Metaanalyse
 
-# load the packages
+"""
+
+The main package Metaanalyse that includes the modules and exports all functions
+and also contains the scripts
+
+"""
+
+
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 

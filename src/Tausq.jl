@@ -1,3 +1,12 @@
+"""
+    tausq(y,v) 
+    
+    Tau square estimate, where y refers to the array containing the point estimates of the studies included in the meta analysis 
+    and v refers to the array containing the variance estimates around the point estimates of the individual studies. 
+
+
+"""
+
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 # Write a function for tausq

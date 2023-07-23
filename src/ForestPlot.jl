@@ -2,7 +2,13 @@
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 
-## Make forest plots
+"""
+    forestPlot(study, y, v) 
+
+    Forest Plot of the meta analysis.
+
+
+"""
 function forestPlot(study, y, v)
     w = 1 ./ v
     relw = (w ./ sum(w)) * 100

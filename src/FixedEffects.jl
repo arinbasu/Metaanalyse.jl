@@ -1,6 +1,12 @@
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 
+"""
+    fixedEffects(y,v)
+    
+    Fixed Effects Meta Analysis
+
+"""
 
 function fixedEffects(y,v)
     w = 1 ./ v

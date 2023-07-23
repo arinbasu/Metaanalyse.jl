@@ -1,7 +1,7 @@
-using MetaanalysisJulia
+using Metaanalyse
 using Test
 
-@testset "MetaanalysisJulia.jl" begin
+@testset "Metaanalyse.jl" begin
     # start with a data frame
 study = ["Carroll", "Grant", "Peck", "Donat", "Stewart", "Young"]
 trt_mean = [94, 98, 98, 94, 98, 96]
@@ -44,21 +44,21 @@ df2 = select(df, :study, :y, :v)
 
 
 # test fixed effects model 
-@test MetaanalysisJulia.fixedEffects(df.y, df.v)
+@test Metaanalyse.fixedEffects(df.y, df.v)
 
 # Now write the random effects model
 
 
 
 # test tausq works
-@test MetaanalysisJulia.tausq(df.y, df.v)
+@test Metaanalyse.tausq(df.y, df.v)
 
 # Now write the random effects model function
 
 
 
 # test for random effects
-@test MetaanalysisJulia.randEffects(df.y, df.v)
+@test Metaanalyse.randEffects(df.y, df.v)
 
 # fixed effects weights
 df.wf = 1 ./ df.v
@@ -81,7 +81,7 @@ select(df, :study, :y, :wf, :relwf, :relwr)
 
 
 
-@test MetaanalsisJulia.isq(df.study, df.y, df.v)
+@test Metaanalse.isq(df.study, df.y, df.v)
 
 
 end

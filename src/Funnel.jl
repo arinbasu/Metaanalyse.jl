@@ -1,9 +1,12 @@
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 
-#
-# Write the function for Funnel Plot
+"""
+    funnel(y,v)
 
+    Funnel Plot.
+
+"""
 function funnel(y,v)
     se = sqrt.(v)
     w = 1 ./ v

@@ -1,3 +1,15 @@
+"""
+    randEffects(y,v) 
+    
+    Random effects meta analysis given point  estimates and variances around the point estimate for the individual studies. 
+    
+    The point estimate (y) is an array and the variance around
+    the point estimate (v) is also an array. The function outputs the average effect size (m),
+    variance around the average effect size (vm), lower boundary of the 955 confidence interval (llm),
+    the upper bound of the 95% confidence interval (ulm), and the p-value of the effect size (p)
+    
+"""
+
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 

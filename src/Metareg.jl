@@ -1,3 +1,10 @@
+"""
+    metareg(y,x) 
+    
+    Regression of y array or array of point estimates on only one x variable  presented in the form of an array. 
+
+
+"""
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 

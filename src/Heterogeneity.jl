@@ -1,7 +1,14 @@
 using DataFrames, CairoMakie, GLM, HypothesisTests, Distributions
 CairoMakie.activate!
 
-# Write the function for heterogeneity
+"""
+    isq(study,y,v)
+
+    Heterogeneity statistics for the meta analysis. 
+        
+    Inputs study, an array of point estimates (y)  and an array of variances around the point estimates (v).
+
+"""
 
 function isq(study,y,v)
     w = 1 ./ v
